@@ -166,6 +166,7 @@ const gameLoop = () => {
     }, 300); // Define a velocidade do jogo
 }
 
+
 // Inicia o jogo ao clicar no botão "Iniciar Jogo"
 startGameButton.addEventListener("click", () => {
     playerName = playerNameInput.value; // Captura o nome do jogador
@@ -176,6 +177,7 @@ startGameButton.addEventListener("click", () => {
 
         // Oculta a área de entrada
         document.querySelector(".name-input").style.display = "none";
+
         snake = [initialPosition]; // Reinicia a cobrinha
         direction = undefined; // Reseta a direção
         gameLoop(); // Inicia o loop do jogo
