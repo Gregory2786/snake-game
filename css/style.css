@@ -19,7 +19,7 @@ body {
 }
 
 canvas {
-    background-color: #8a8484;
+    background-color: #505050;
 }
 
 .score {
@@ -80,6 +80,7 @@ canvas {
     padding: 10px;
     margin-bottom: 10px;
     width: 200px;
+    
 }
 
 #startGame {

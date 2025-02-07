@@ -9,8 +9,6 @@ const buttonPlay = document.querySelector(".btn-play");
 const playerNameInput = document.getElementById("playerName");
 const startGameButton = document.getElementById("startGame");
 
-const audio = new Audio("../assets/audio.mp3");
-
 const size = 30;
 const initialPosition = { x: 270, y: 240 };
 let snake = [initialPosition];
@@ -46,7 +44,7 @@ let direction, loopId;
 
 const drawFood = () => {
     const { x, y, color } = food;
-    ctx.shadowColor = color;
+
     ctx.shadowBlur = 6;
     ctx.fillStyle = color;
     ctx.fillRect(x, y, size, size);
@@ -57,7 +55,7 @@ const drawSnake = () => {
     ctx.fillStyle = "#ddd";
     snake.forEach((position, index) => {
         if (index == snake.length - 1) {
-            ctx.fillStyle = "white";
+            ctx.fillStyle = "red"
         }
         ctx.fillRect(position.x, position.y, size, size);
     });
@@ -107,7 +105,6 @@ const chackEat = () => {
     if (head.x == food.x && head.y == food.y) {
         incrementScore();
         snake.push(head);
-        audio.play();
 
         let x = randomPosition();
         let y = randomPosition();
